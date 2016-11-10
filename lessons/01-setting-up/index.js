@@ -9,8 +9,9 @@ import   About    from './modules/About'
 render((
   <Router history={hashHistory}>
     <Route path="/" component={App} >
-      <Route path="/repos" component={Repos}/>
-      <Route path="/repos/:userName/:repoName" component={Repo}/>
+      <Route path="/repos" component={Repos}>
+        <Route path="/repos/:userName/:repoName" component={Repo}/>
+      </Route>
       <Route path="/about" component={About}/>
     </Route>
   </Router>
